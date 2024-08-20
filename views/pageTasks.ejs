@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>cotera.es Tecnología y Diseño Web</title>
+    <meta name="description" content="cotera.es Tecnología y Diseño Web es una empresa asturiana de diseño y desarrollo de proyectos orientados a internet.">
+    <meta name="author" content="Diego" >
+
+  	<link rel="stylesheet" href="src/css/styles.css?v=1.0">
+  	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  </head>
+  <body>
+
+      <header>
+    		<h1>cotera.es Tecnología y Diseño Web <%= message %></h1>
+        <img width="100%" height="100%" src="coteraes_logo_trazado.svg" alt="cotera.es Tecnología y Diseño Web">
+    	</header>
+
+    	<article>
+        <p>Edificio Impulsa</p>
+        <p>Parque Científico Tecnológico de Gijón</p>
+        <p>Los Prados, 166</p>
+        <p>33203 Gijón</p>
+        <p>Asturias</p>
+
+
+    	</article>
+    	
+    	<article>
+			<h2>My Tasks <%= message %></h2>
+			<ul>
+				<% tasks.forEach( (task) => { %>
+					<li><%= task.id %> <%= task.text %></li>
+				<% }) %>
+			
+			</ul>
+			
+						<form  method="post" action="/tasks">
+						  <label for="text">Text:</label><br>
+						  <input type="json" id="text" name="text"><br>
+						  <input type="submit" value="Submit">
+						</form> 
+		</article>	
+
+    	<footer>
+    	<p><strong>correo@cotera.es</strong></p>
+        <p>Teléfono: <strong>(+34) 985 99 18 07</strong></p>
+        <p>Móvil: <strong>(+34) 699 71 44 21</strong></p>
+    	</footer>
+  </body>
+</html>
